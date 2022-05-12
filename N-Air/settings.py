@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#++w*kdw=_4=gia-&m(_dojn$!ats6b+e^@++izbp=f==9@=bk'
+SECRET_KEY = 'YOUR SECRET KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'N-Air.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'website',
-        'USER': 'postgres',
-        'PASSWORD': 'murtazo0012800',
+        'NAME': 'YOUR PSQL-NAME',
+        'USER': 'YOUR PSQL-USER',
+        'PASSWORD': 'YOUR PSQL-PASSWORD',
         'HOST': 'localhost',
         'PORT': '5432'
     }
