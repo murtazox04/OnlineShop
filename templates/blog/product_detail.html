@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .product-all {
+        padding-left: 500px;
+    }
+</style>
+<div class="product-all">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">{{ product.category.name }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ product.title }}</li>
+        </ol>
+    </nav>
+    <div class="product-detail">
+        <div class="product-detail-img">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+        </div>
+        <div class="product-detail-info">
+            <h4><strong>{{ product.title }}</strong></h4>
+            <p><strong>Narxi:</strong>{{ product.price }}$</p>
+            <p><strong>To'liq ma'lumot:</strong>{{ product.description }}</p>
+            <p><strong>Ma'lumot:</strong></p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

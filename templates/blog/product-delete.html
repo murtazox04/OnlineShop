@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        {{ form }}
+        <input type="submit" value="Confirm">
+    </form>
+{% endblock %}
+        <div class="container">
+            <form action="search" method="get">
+                <input type="text" name="search-text" placeholder="Seached text">
+                <input type="number" name="from-price" placeholder="Price from">
+                <input type="number" name="to-price" placeholder="price to">
+                <input type="submit" value="Search">
+            </form>
+        </div>
